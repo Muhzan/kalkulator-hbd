@@ -1,35 +1,31 @@
-body {
+#body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: hsl(0, 0%, 95%);
-    padding: 10px; /* Tambahkan padding untuk ruang di sekitar kalkulator */
-    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran total */
 }
 
 #calculator {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 100%; /* Mengatur lebar maksimum ke 100% */
-    width: 500px; /* Menetapkan lebar tetap */
+    max-width: 500px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi ukuran total */
 }
 
 #display {
-    width: 201%; /* Mengatur lebar ke 100% */
+    width: 200%; /* Mengatur lebar ke 100% */
     padding: 20px;
-    font-size: 5rem; /* Ukuran font yang besar */
+    font-size: 5rem;
     text-align: left;
     border: none;
     background-color: hsl(0, 0%, 20%);
     color: white;
     position: relative;
-    overflow: hidden; /* Atur overflow ke hidden */
+    overflow: visible; /* Atur overflow ke visible */
     white-space: nowrap; /* Mencegah teks terpotong */
 }
 
@@ -55,8 +51,8 @@ body {
 }
 
 button {
-    width: 100%; /* Mengatur lebar tombol ke 100% dari kolom */
-    height: 100px; /* Tinggi tombol */
+    width: 100px;
+    height: 100px;
     border-radius: 50px;
     border: none;
     background-color: hsl(0, 0%, 30%);
