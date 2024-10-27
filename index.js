@@ -25,12 +25,9 @@ function appendToDisplay(input) {
         display.value += input;
     }
 
-    // Tampilkan pesan jika angka adalah 27
+    // Tampilkan pesan jika angka yang ditekan adalah 27
     if (display.value == "27") {
-        display.value = "HAPPY BIRTHDAY ARA <3";
-        display.classList.add('birthday-message'); // Tambahkan class CSS untuk animasi
-        startMarquee(); // Mulai animasi marquee
-        birthdayAudio.play(); // Putar musik saat pesan muncul
+        showBirthdayMessage();
     } else {
         display.classList.remove('birthday-message'); // Hapus class jika pesan berbeda
     }
@@ -48,11 +45,25 @@ function calculate() {
     try {
         // Cek jika bukan "HAPPY BIRTHDAY ARA <3"
         if (display.value != "HAPPY BIRTHDAY ARA <3" && display.value != "") {
-            display.value = eval(display.value);
+            const result = eval(display.value);
+            display.value = result;
+
+            // Tampilkan pesan jika hasilnya adalah 27
+            if (result == 27) {
+                showBirthdayMessage();
+            }
         }
     } catch (error) {
         display.value = "Error";
     }
+}
+
+// Fungsi untuk menampilkan pesan ulang tahun
+function showBirthdayMessage() {
+    display.value = "HAPPY BIRTHDAY ARA <3";
+    display.classList.add('birthday-message'); // Tambahkan class CSS untuk animasi
+    startMarquee(); // Mulai animasi marquee
+    birthdayAudio.play(); // Putar musik saat pesan muncul
 }
 
 // Fungsi untuk memulai animasi marquee
