@@ -60,7 +60,7 @@ function calculate() {
 
 // Fungsi untuk menampilkan pesan ulang tahun
 function showBirthdayMessage() {
-    display.value = "HAPPY BIRTHDAY ARA <3";
+    display.value = "HAPPY BIRTHDAY ARAAA <3";
     display.classList.add('birthday-message'); // Tambahkan class CSS untuk animasi
     startMarquee(); // Mulai animasi marquee
     birthdayAudio.play(); // Putar musik saat pesan muncul
